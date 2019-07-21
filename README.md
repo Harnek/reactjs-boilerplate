@@ -1,4 +1,4 @@
-# reactjs-boilerplater
+# reactjs-boilerplate
 
 # Project setup
 	
@@ -8,7 +8,6 @@
 		or 
 	npm install
 
-
 # Run Project
 
 	yarn run start
@@ -17,3 +16,8 @@
 
 	yarn run build
 
+# Features
+  - Webpack + Babel
+  - ESLint
+  - Prettier
+  - React Hot Reloading
