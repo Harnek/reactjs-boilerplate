@@ -21,5 +21,6 @@ Welcome.defaultProps = {
   className: 'main',
 };
 
-
 ReactDOM.render(<Welcome />, document.getElementById('root'));
+
+module.hot.accept();

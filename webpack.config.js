@@ -1,25 +1,25 @@
+const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist/',
     filename: 'bundle.js',
   },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    publicPath: '/dist/',
     contentBase: './dist',
-    watchContentBase: true,
+    // watchContentBase: true,
+    hot: true,
   },
   // mode: 'development',
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(js|jsx)$/,
@@ -27,5 +27,8 @@ module.exports = {
         use: ['babel-loader', 'eslint-loader'],
       },
     ],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
   },
 };
