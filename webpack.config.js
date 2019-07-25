@@ -11,7 +11,8 @@ module.exports = {
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     contentBase: './dist',
-    // watchContentBase: true,
+    publicPath: '/',
+    watchContentBase: true,
     hot: true,
   },
   // mode: 'development',
